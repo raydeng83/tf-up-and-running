@@ -13,7 +13,7 @@ terraform {
     # manually, uncomment and fill in the config below.
 
     bucket         = "tf-ldeng-ch4-bucket-1"
-    key            = "prod/data-stores/mysql/terraform.tfstate"
+    key            = "prod/state/terraform.tfstate"
     region         = "us-east-2"
     dynamodb_table = "tf-ldeng-ch4-table-1"
     encrypt        = true

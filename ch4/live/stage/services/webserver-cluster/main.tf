@@ -6,9 +6,9 @@ module "webserver_cluster" {
   # source = "../../../modules/services/webserver-cluster"
   source = "github.com/raydeng83/tf-modules//services/webserver-cluster?ref=v0.0.6"
 
-  cluster_name           = "webservers-stage"
-  db_remote_state_bucket = "tf-ldeng-ch4-bucket-1"
-  db_remote_state_key    = "state/terraform.tfstate"
+  cluster_name           = var.cluster_name
+  db_remote_state_bucket = var.db_remote_state_bucket
+  db_remote_state_key    = var.db_remote_state_key
 
   instance_type = "t2.micro"
   min_size      = 2
